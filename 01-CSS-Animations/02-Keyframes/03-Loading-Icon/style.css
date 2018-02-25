@@ -1,0 +1,90 @@
+html {
+  background: #ecf0f1;
+}
+
+body,
+h1,
+h2 {
+  font-family: Helvetica, Sans-serif;
+  color: #2c3e50;
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 80px;
+}
+
+.loaded {
+  margin: auto;
+  text-align: center;
+  font-size: 36px;
+  opacity: 0;
+  animation: appear 1s 3s forwards;
+}
+
+.container {
+  margin: 4em;
+  text-align: center;
+}
+
+.loader {
+  margin: auto;
+  border: 16px solid #bdc3c7;
+  width: 120px;
+  height: 120px;
+  border-top-color: #1abc9c;
+  border-bottom-color: #3498db;
+  border-radius: 50%;
+  animation: coloredSpin 4s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes coloredSpin {
+  0% {
+    transform: rotate(0deg) scale(1);
+    border: 16px solid #cfd5da;
+    border-top-color: #3498db;
+    border-bottom-color: #3498db;
+    opacity: .8;
+  }
+  25% {
+    border: 16px solid #434647;
+    border-top-color: #b08eff;
+    border-bottom-color: #b08eff;
+  }
+  50% {
+    transform: rotate(360deg) scale(1.07);
+    opacity: .5;
+  }
+  75% {
+    border: 16px solid #777c7e;
+    border-top-color: #4b0096;
+    border-bottom-color: #4b0096;
+  }
+  100% {
+    transform: rotate(720deg) scale(1);
+    border: 16px solid #cfd5da;
+    border-top-color: #3498db;
+    border-bottom-color: #3498db;
+    opacity: .8;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
