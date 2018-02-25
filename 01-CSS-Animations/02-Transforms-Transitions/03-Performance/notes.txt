@@ -1,0 +1,5 @@
+Best performance only use transforms on:
+    translate
+    scale
+    rotate
+    opacity
