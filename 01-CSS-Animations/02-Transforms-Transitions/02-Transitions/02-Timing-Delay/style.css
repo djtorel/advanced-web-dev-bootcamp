@@ -29,12 +29,23 @@
 } */
 
 .animated {
+    -webkit-transition:
+        background-color 0.5s linear,
+        -webkit-transform 2s ease-out 1s;
+    transition:
+        background-color 0.5s linear,
+        -webkit-transform 2s ease-out 1s;
     transition:
         transform 2s ease-out 1s,
         background-color 0.5s linear;
+    transition:
+        transform 2s ease-out 1s,
+        background-color 0.5s linear,
+        -webkit-transform 2s ease-out 1s;
 }
 
 .box:hover {
-    transform: translateX(300px);
+    -webkit-transform: translateX(300px);
+            transform: translateX(300px);
     background-color: teal;
 }
